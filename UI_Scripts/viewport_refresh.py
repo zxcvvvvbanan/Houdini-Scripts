@@ -19,8 +19,7 @@ def main():
      newscene = scene_viewer
  
      # start restoring flipbook settings to new scene viewer
-     # If you want to customize it,
-     # ask me or see hou.GeometryViewport class, hou.GeometryViewportCamera class to find methods you need
+     # see hou.GeometryViewport class, hou.GeometryViewportCamera class to find methods you need
  
      newscene.flipbookSettings().frameRange((startF,endF))
      newscene.flipbookSettings().useResolution(use_res)
@@ -30,13 +29,6 @@ def main():
      newscene.showOperationBar(oldscene.isShowingOperationBar())
      newscene.showSelectionBar(oldscene.isShowingSelectionBar())
      newscene.showDisplayOptionsBar(oldscene.isShowingDisplayOptionsBar())
- 
-     #restore scene viewer setting
-     newscene.setSnappingMode(oldscene.snappingMode())
-     newscene.setPickingVisibleGeometry(oldscene.isPickingVisibleGeometry())
-     newscene.setPickingContainedGeometry(oldscene.isPickingContainedGeometry())
-     newscene.setWholeGeometryPicking(oldscene.isWholeGeometryPicking())
-     newscene.setSecureSelection(oldscene.isSecureSelection())
  
      #restore camera
      #If current viewport has cam selected, it restores it's value
